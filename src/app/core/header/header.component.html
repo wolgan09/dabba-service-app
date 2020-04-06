@@ -1,0 +1,13 @@
+
+<mat-toolbar color=primary >
+  <mat-icon class="material-icons md-24" >menu</mat-icon>
+  <span>{{ headerTitle }}</span>
+  <span class="example-spacer"></span>
+  <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
+  <mat-icon class="example-icon" >face</mat-icon>
+</mat-toolbar>
+<mat-grid-list cols="1" rowHeight="1000px">
+  <mat-grid-tile     colspan="1"     rowspan="1"      >
+      <router-outlet></router-outlet>
+    </mat-grid-tile>
+</mat-grid-list>
