@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
+import { FormsModule} from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
-import { SharedModule } from '../shared/shared.module';
-import { Router, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { MaterialModule } from '../shared/material.module';
+import { CommonModule } from '@angular/common';
+
 
 @NgModule({
   declarations: [HeaderComponent],
   imports: [
-    SharedModule,
-    RouterModule
+    MaterialModule,
+    RouterModule,
+    FormsModule,
+    CommonModule
   ],
   exports: [HeaderComponent]
 })

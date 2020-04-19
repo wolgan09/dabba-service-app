@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { SharedModule } from '../shared/shared.module';
-import { AdminUserModule } from './admin-user/admin-user.module';
+import { MaterialModule } from '../shared/material.module';
+import { CartModule } from './cart/cart.module';
+import { MenuModule } from './menu/menu.module';
+
 
 
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
-  ]
+    MaterialModule,
+    CartModule,
+    MenuModule,
+  ],
 })
 export class FeatureModule { }

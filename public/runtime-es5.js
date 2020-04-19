@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({"feature-user-admin-user-admin-user-module":"feature-user-admin-user-admin-user-module","feature-user-customer-user-customer-user-module":"feature-user-customer-user-customer-user-module"}[chunkId]||chunkId) +    "-es5.js"
+/******/ 		return __webpack_require__.p + "" + ({"feature-user-user-module":"feature-user-user-module"}[chunkId]||chunkId) +    "-es5.js"
 /******/ 	}
 /******/
 /******/ 	// The require function

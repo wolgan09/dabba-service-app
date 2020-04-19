@@ -13,8 +13,9 @@ const routes: Routes = [
   },
   {
     path: 'home', component: HomeComponent },
-  { path: 'customer-user', loadChildren: () => import('./feature/user/customer-user/customer-user.module').then(m => m.CustomerUserModule) },
-  { path: 'admin-user', loadChildren: () => import('./feature/user/admin-user/admin-user.module').then(m => m.AdminUserModule) },
+  { path: 'user', loadChildren: () => import('./feature/user/user.module').then(m => m.UserModule) },
+  { path: 'menu', loadChildren: () => import('./feature/menu/menu.module').then(m => m.MenuModule) },
+  { path: 'cart', loadChildren: () => import('./feature/cart/cart.module').then(m => m.CartModule) },
   {
    path: '**',
    component: PageNotFoundComponent

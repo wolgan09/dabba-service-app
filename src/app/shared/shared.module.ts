@@ -1,24 +1,17 @@
 import { NgModule } from '@angular/core';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatGridListModule } from '@angular/material/grid-list';
-import {MatIconModule} from '@angular/material/icon';
-import { SharedComponentsComponent } from './components/shared-components/shared-components.component';
+import { MaterialModule } from "./material.module";
+
 
 
 
 
 @NgModule({
-  declarations: [SharedComponentsComponent],
+  declarations: [],
   imports: [
-    MatToolbarModule,
-    MatGridListModule,
-    MatIconModule
+    MaterialModule
   ],
   exports: [
-    MatToolbarModule,
-    MatGridListModule,
-    MatIconModule,
-    SharedComponentsComponent
+    MaterialModule,
   ]
 })
 export class SharedModule { }

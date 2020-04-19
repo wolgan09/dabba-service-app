@@ -1,13 +1,34 @@
+<div class="example-container"  >
+  <mat-toolbar color="primary" class="example-toolbar">
+    <ng-container   *ngIf="isMobileScreen">
+      <div class="w-25 ">
+        <!-- #####inside toolbar ##### -->
+        <mat-icon class="md-36" mat-raised-button (click)="snav.toggle()">menu</mat-icon>
+        <!-- #####inside toolbar ##### -->
+      </div>
+      </ng-container>
+    <div [class]="isMobileScreen ? 'w-75' : 'w-90'">
+    <h1 class="example-app-name" [routerLink]="['/home']">Restaurant App</h1>
+    </div>
+    <div class="w-10 " *ngIf="!isMobileScreen">
+      <mat-icon [routerLink]="['/cart']" routerLinkActive="router-link-active"  class="material-icons md-36" >shopping_cart</mat-icon>
+      <mat-icon [routerLink]="['/menu']" class="material-icons md-36">menu_book</mat-icon>
+      <mat-icon [routerLink]="['/user']" class="material-icons md-36">account_circle</mat-icon>
+    </div>
+  </mat-toolbar>
 
-<mat-toolbar color=primary >
-  <mat-icon class="material-icons md-24" >menu</mat-icon>
-  <span>{{ headerTitle }}</span>
-  <span class="example-spacer"></span>
-  <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
-  <mat-icon class="example-icon" >face</mat-icon>
-</mat-toolbar>
-<mat-grid-list cols="1" rowHeight="1000px">
-  <mat-grid-tile     colspan="1"     rowspan="1"      >
-      <router-outlet></router-outlet>
-    </mat-grid-tile>
-</mat-grid-list>
+</div>
+<!-- For mobile view -->
+
+<mat-sidenav-container class="example-sidenav-container" [style.height]="isMobileScreen ? '100% ': 'auto' ">
+  <mat-sidenav #snav [mode]="isMobileScreen ? 'over' : 'side' " [style.width.%]="100" >
+      <mat-nav-list>
+        <mat-list-item  *ngFor="let item of fillerNav" >
+          <a (click)="snav.toggle()" [routerLink]="[item.path]" >{{item.title}}</a>
+        </mat-list-item>
+      </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
