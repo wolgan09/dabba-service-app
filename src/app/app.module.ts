@@ -14,6 +14,10 @@ import {LayoutModule} from '@angular/cdk/layout';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { FeatureModule } from './feature/feature.module';
+import { HttpClientModule } from '@angular/common/http';
+import { httpInterceptorProviders } from './core/interceptors';
+import { NgxSpinnerModule } from 'ngx-spinner';
+
 
 @NgModule({
   declarations: [
@@ -32,8 +36,10 @@ import { FeatureModule } from './feature/feature.module';
     FeatureModule,
     NoopAnimationsModule,
     RouterModule,
+    HttpClientModule,
+    NgxSpinnerModule
     /*Ngrx Store*/ ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule {
