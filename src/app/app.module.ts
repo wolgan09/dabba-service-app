@@ -17,6 +17,7 @@ import { FeatureModule } from './feature/feature.module';
 import { HttpClientModule } from '@angular/common/http';
 import { httpInterceptorProviders } from './core/interceptors';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { MaterialModule } from './shared/material.module';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     FormsModule,
     LayoutModule,
     CoreModule,
+    MaterialModule,
     FeatureModule,
     NoopAnimationsModule,
     RouterModule,

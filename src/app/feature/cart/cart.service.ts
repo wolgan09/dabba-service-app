@@ -8,6 +8,6 @@ export class CartService {
   constructor(private httpClient: HttpClient) { }
 
   getCartList(): Observable<any> {
-    return this.httpClient.get('https://jsonplaceholder.typicode.com/users');
+    return this.httpClient.get('/users');
   }
 }
