@@ -18,6 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { httpInterceptorProviders } from './core/interceptors';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { MaterialModule } from './shared/material.module';
+import { InMemoryWebApiModule, HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryStoreService } from './api/in-memory-store.service';
 
 
 @NgModule({
@@ -39,7 +41,10 @@ import { MaterialModule } from './shared/material.module';
     NoopAnimationsModule,
     RouterModule,
     HttpClientModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    InMemoryWebApiModule.forRoot(InMemoryStoreService, { delay: 10 }),
+    environment.production ?
+    [] : HttpClientInMemoryWebApiModule.forRoot(InMemoryStoreService)
     /*Ngrx Store*/ ],
   providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]

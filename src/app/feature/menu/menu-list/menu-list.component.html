@@ -1,18 +1,13 @@
-<mat-card>Menu items</mat-card>
 
-<div class="pl-5 pt-2">
-<mat-card class="example-card " style="float: left;" *ngFor="let item of menuList$ | async " >
+
+<div class="container">
+  <p class="display-4">Category (<small class="text-muted">{{(menuList$ | async)?.length}}</small>)</p> 
+ <div class="row" >
+<mat-card class="example-card col-3 mt-2" *ngFor="let item of menuList$ | async " >
   <mat-card-header>
     <mat-card-title class="card-title">{{item.name}}</mat-card-title>
   </mat-card-header>
-  <img mat-card-image class="menu-type-img" [src]="item.image" alt="Cart Item">
-  <mat-card-content>
-    <button class="btn btn-sm"  [matBadge]="item['menu-items'].length">
-      Menu items
-    </button>
-         
-      <button class="btn btn-sm btn-primary mr-2" >Open</button>
-  </mat-card-content>
-
-</mat-card>
+  <img mat-card-image class="menu-type-img" [src]="item.image" alt="Cart Item" [routerLink]="['/menu', item.id]" >
+  </mat-card>
 </div>
+</div>  

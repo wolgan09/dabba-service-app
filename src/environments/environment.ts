@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api_url : "http://127.0.0.1:5000/api",
+  api_url : "localhost:4200",
   CI_Token:'1//0g8nMdYYKS-uOCgYIARAAGBASNwF-L9Irx3j6BYp28AJ2SRRdVFwupi5MQRfAlmTBvs_yQLKe8b7cMUhwMPANrgGbUx5c1s37sbg'
 };
 

@@ -14,6 +14,7 @@ const routes: Routes = [
   {
     path: 'home', component: HomeComponent },
   { path: 'user', loadChildren: () => import('./feature/user/user.module').then(m => m.UserModule) },
+  { path: 'dashboard', loadChildren: () => import('./feature/dashboard/dashboard.module').then(m => m.DashboardModule) },
   { path: 'menu', loadChildren: () => import('./feature/menu/menu.module').then(m => m.MenuModule) },
   { path: 'cart', loadChildren: () => import('./feature/cart/cart.module').then(m => m.CartModule) },
   {

@@ -1,19 +1,19 @@
 <h4>Your Cart contains</h4>
-<div class="pl-5">
-<mat-card class="example-card " style="float: left;" *ngFor="let item of cartList$ | async" >
+<div class="container">
+<div class="row ">
+<mat-card class="example-card col-3 mt-3"  *ngFor="let item of cartList$ | async" >
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
     <mat-card-title class="card-title">{{item.name}}</mat-card-title>
     <mat-card-subtitle>User : {{item.id}}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Cart Item">
+  <img mat-card-image [src]="item.image" class="user-image" alt="Cart Item">
   <mat-card-content>
-    <p> {{item.location.name}} </p>
-    <p> {{item.relationship_status}} </p>
   </mat-card-content>
   <mat-card-actions>
     <button class="btn btn-sm btn-primary mr-2" >View Details</button>
-    <button class="btn btn-sm btn-info">SHARE</button>
   </mat-card-actions>
 </mat-card>
 </div>
+</div>
+

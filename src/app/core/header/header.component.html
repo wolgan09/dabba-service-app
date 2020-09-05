@@ -20,7 +20,7 @@
 </div>
 <!-- For mobile view -->
 
-<mat-sidenav-container class="example-sidenav-container" [style.height]="isMobileScreen ? '100% ': 'auto' ">
+<mat-sidenav-container class="example-sidenav-container" fxFlexFill [style.height]="isMobileScreen ? '100% ': 'auto' ">
   <mat-sidenav #snav [mode]="isMobileScreen ? 'over' : 'side' " [style.width.%]="100" >
       <mat-nav-list>
         <mat-list-item  *ngFor="let item of fillerNav" >
@@ -28,7 +28,7 @@
         </mat-list-item>
       </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content>
+  <mat-sidenav-content fxFlexFill>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

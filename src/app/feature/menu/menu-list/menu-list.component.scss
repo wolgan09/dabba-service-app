@@ -8,5 +8,11 @@
   } 
 
   .menu-type-img{
-    height: 18em;width: 18em;
+    height: 15em;
+    cursor: pointer;
+    &:hover{
+    transition: all .3s;
+    transition-timing-function: ease-in-out;
+    transform: scale(1.05);
+    }
   }

@@ -14,11 +14,16 @@ export class MenuService {
 
   getMenuList(): Observable<any> {
     return this.httpClient.get('/menu').pipe(
-      map( (menu:Array<any>) => menu.filter( item => item.image = '/assets/images/' + _.sample(imagesArray)) ))
-      
+      map( (menu:Array<any>) => 
+       menu.filter( item => item.image = '/assets/images/' + _.sample(imagesArray)) 
+       ))
   }
 
-  getPokemonDetails(id): Observable<any> {
+  /**
+   * @description Get menu details
+   * @param id: If of category
+   */
+  getMenu(id): Observable<any> {
     return this.httpClient.get('/menu?item=' + id);
   }
 }
