@@ -1,4 +1,8 @@
-# StandardAppKit
+# DabbaServiceApp
+Demo app 
+ 1. PWA
+ 2. Performance
+ 3. Angular Material
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
 

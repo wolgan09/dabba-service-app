@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "standard-app-kit": {
+    "dabba-service-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/standard-app-kit",
+            "outputPath": "dist/dabba-service-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "standard-app-kit:build"
+            "browserTarget": "dabba-service-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "standard-app-kit:build:production"
+              "browserTarget": "dabba-service-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "standard-app-kit:build"
+            "browserTarget": "dabba-service-app:build"
           }
         },
         "test": {
@@ -118,15 +118,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "standard-app-kit:serve"
+            "devServerTarget": "dabba-service-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "standard-app-kit:serve:production"
+              "devServerTarget": "dabba-service-app:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "standard-app-kit"
+  "defaultProject": "dabba-service-app"
 }
