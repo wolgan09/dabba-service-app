@@ -34,7 +34,10 @@ $dabba-service-app-theme: mat-light-theme((
 @include angular-material-theme($dabba-service-app-theme);
 
 /* You can add global styles to this file, and also import other style files */
-
+* {
+outline: none !important;
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-@import "~bootstrap/dist/css/bootstrap.css"
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "./styles/vendors/angular-material.scss";

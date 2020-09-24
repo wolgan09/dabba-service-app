@@ -6,14 +6,23 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'dabba-service-app';
-  menuItems = [];
-  constructor(private http: HttpClient){}
-  ngOnInit(): void {
-    this.http.get('http://localhost:3000/getrecipies').subscribe(
-      // tslint:disable-next-line: no-string-literal
-      (res) => { this.menuItems = res['food']; }
-    )
-  }
+
+  navMenuList = [
+    {
+      title: 'Home',
+      path: ''
+    },
+    {
+      title: 'Dashboard',
+      path: '/dashboard'
+    },
+    {
+      title: 'Recipies',
+      path: '/recipies'
+    }
+  ];
+  constructor() { }
+  ngOnInit(): void { }
 }

@@ -11,6 +11,11 @@ app.use(function(req, res, next) {
   next();
 });
 app.get('/getrecipies', (req, res) => res.json(database))
+app.get('/getrecipies/:id', function (req, res, next) {
+  var id = req.params.id;
+  let result = database.food.find( item => item.id === +id )
+  res.json(result);
+});
 app.listen(PORT,()=>{
     console.info(`Server is running on ${PORT}`)
 })
